@@ -1,0 +1,17 @@
+#correct version of Q62
+class Ambulance:
+    """Represents an ambulance"""
+
+amb1 = Ambulance()
+
+object.priority = 0
+object.speed = 2
+object.capacity = 0
+
+def controlled_velocity(car):
+    v = -10*(1 - car.priority) + 2.37*(car.speed/ 10)**3.98 + 30*(car.capacity + 1.2)
+    return v
+
+cv = controlled_velocity(amb1)
+
+print(cv)
